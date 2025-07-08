@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -101,7 +106,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -142,7 +147,7 @@ body {
     display: inline-block;
     background: #e74c3c;
     color: white;
-    padding: 15px 30px;
+    padding: 0.7em 1.5em;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
@@ -225,7 +230,7 @@ body {
 
 .overview h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 50px;
     color: #2c3e50;
 }
@@ -970,8 +975,22 @@ body {
 .highlights-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 1.2em;
     justify-content: center;
+}
+.highlights-grid .highlight-card {
+    flex: 0 0 48%;
+    max-width: 48%;
+    box-sizing: border-box;
+}
+@media (max-width: 600px) {
+    .highlights-grid {
+        flex-direction: column;
+    }
+    .highlights-grid .highlight-card {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
 }
 .highlight-card {
     background: white;
@@ -1083,8 +1102,22 @@ body {
 .packing-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 1.2em;
     justify-content: center;
+}
+.packing-grid .packing-card {
+    flex: 0 0 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+}
+@media (max-width: 600px) {
+    .packing-grid {
+        flex-direction: column;
+    }
+    .packing-grid .packing-card {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
 }
 .packing-card {
     background: white;
@@ -1467,5 +1500,130 @@ section h3 {
     }
     .tip-card ul {
         font-size: 0.88rem;
+    }
+} 
+
+@media (max-width: 700px) {
+  .overview .route-map {
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    width: 100vw;
+    min-width: 0;
+  }
+  .overview .route-line {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    min-width: 700px;
+    width: max-content;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+  }
+  .overview .route-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e0eafc;
+    z-index: 0;
+  }
+  .overview .route-point {
+    min-width: 64px;
+    max-width: 80px;
+    font-size: 0.92rem;
+    padding: 8px 2px 0 2px;
+    margin: 0 2px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(26,41,128,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+  }
+  .overview .route-point i {
+    font-size: 1.3rem;
+    margin-bottom: 2px;
+  }
+  .overview .route-point span {
+    font-size: 0.92rem;
+    margin-bottom: 0;
+    text-align: center;
+    word-break: break-all;
+  }
+  .overview .route-date {
+    font-size: 0.8rem;
+    margin-top: 2px;
+    color: #888;
+    text-align: center;
+  }
+  .overview-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+    width: 100%;
+  }
+  .overview-cards .card {
+    width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    padding: 12px 6px;
+    text-align: center;
+    border-radius: 10px;
+  }
+} 
+
+/* 适当缩小卡片、表格、列表等区域的字体 */
+.card, .stat, .highlight-card, .packing-card, .budget-details, .detail-item, .checklist, .route-point, .route-date, .route-info, .attractions, .weather-info, .expenses-editor {
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+/* 缩小按钮字号 */
+.cta-button {
+    font-size: 1.2rem;
+    padding: 0.7em 1.5em;
+}
+
+/* 缩小footer字号 */
+.footer, .footer-section, .footer-bottom {
+    font-size: 1.05rem;
+} 
+
+/* 卡片区域两列布局 */
+.hero-stats, .overview-cards, .highlights-grid, .packing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2em;
+    justify-content: center;
+}
+.hero-stats .stat, .card, .highlight-card, .packing-card {
+    flex: 0 0 48%;
+    max-width: 48%;
+    box-sizing: border-box;
+    font-size: 1.15rem;
+    line-height: 1.3;
+}
+
+/* 移动端一列排布 */
+@media (max-width: 600px) {
+    html, body {
+        font-size: 10px;
+    }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.2rem; }
+    h3 { font-size: 1.05rem; }
+    .hero-stats, .overview-cards, .highlights-grid, .packing-grid {
+        flex-direction: column;
+    }
+    .hero-stats .stat, .card, .highlight-card, .packing-card {
+        max-width: 100%;
+        flex: 1 1 100%;
     }
 } 

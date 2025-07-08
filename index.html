@@ -49,7 +49,11 @@
                 </div>
                 <div class="stat">
                     <i class="fas fa-yen-sign"></i>
-                    <span>12000元</span>
+                    <span>约12000元</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-mountain"></i>
+                    <span>10米-4680米</span>
                 </div>
             </div>
             <a href="#itinerary" class="cta-button">查看详细行程</a>
@@ -198,32 +202,6 @@
                     </div>
                 </div>
                 <div class="route-timeline"></div>
-            </div>
-            <div class="overview-cards">
-                <div class="card">
-                    <i class="fas fa-calendar-alt"></i>
-                    <h3>时间安排</h3>
-                    <p>2024年7月19日 - 8月3日</p>
-                    <p>共16天精彩旅程</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-road"></i>
-                    <h3>总里程</h3>
-                    <p>约4500公里</p>
-                    <p>穿越多个气候带</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-mountain"></i>
-                    <h3>海拔变化</h3>
-                    <p>10米 - 4680米</p>
-                    <p>从沿海到高原</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-yen-sign"></i>
-                    <h3>预算费用</h3>
-                    <p>约12000元</p>
-                    <p>2人费用（不含油费）</p>
-                </div>
             </div>
         </div>
     </section>
@@ -802,54 +780,58 @@
                 <div class="packing-card">
                     <h3><i class="fas fa-id-card"></i> 证件与通讯</h3>
                     <ul class="checklist">
-                        <li><label><input type="checkbox"> 身份证/驾驶证</label></li>
-                        <li><label><input type="checkbox"> 手机及充电器/充电宝</label></li>
-                        <li><label><input type="checkbox"> 现金</label></li>
-                        <li><label><input type="checkbox"> 地图/离线导航APP</label></li>
-                        <li><label><input type="checkbox"> 备用钥匙</label></li>
+                        <li class="packing-item"><input type="text" value="身份证/驾驶证" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="手机及充电器/充电宝" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="现金" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="地图/离线导航APP" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="备用钥匙" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
                     </ul>
+                    <button class="add-item-btn" aria-label="添加">+</button>
                 </div>
                 <div class="packing-card">
                     <h3><i class="fas fa-shield-alt"></i> 防护与健康</h3>
                     <ul class="checklist">
-                        <li><label><input type="checkbox"> 防晒用品（防晒霜/墨镜/遮阳帽）</label></li>
-                        <li><label><input type="checkbox"> 雨衣/雨伞</label></li>
-                        <li><label><input type="checkbox"> 防滑登山鞋</label></li>
-                        <li><label><input type="checkbox"> 驱蚊液/花露水</label></li>
-                        <li><label><input type="checkbox"> 一次性口罩/湿巾/消毒液</label></li>
-                        <li><label><input type="checkbox"> 常用药品（感冒药、肠胃药、晕车药、创可贴、布洛芬、藿香正气水、抗高反药物、止泻药、外用消毒药水、过敏药）</label></li>
-                        <li><label><input type="checkbox"> 体温计</label></li>
-                        <li><label><input type="checkbox"> 个人急救包</label></li>
-                        <li><label><input type="checkbox"> 氧气瓶/便携氧气袋</label></li>
-                        <li><label><input type="checkbox"> 保暖衣物</label></li>
+                        <li class="packing-item"><input type="text" value="防晒用品（防晒霜/墨镜/遮阳帽）" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="雨衣/雨伞" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="防滑登山鞋" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="驱蚊液/花露水" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="一次性口罩/湿巾/消毒液" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="常用药品（感冒药、肠胃药、晕车药、创可贴、布洛芬、藿香正气水、抗高反药物、止泻药、外用消毒药水、过敏药）" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="体温计" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="个人急救包" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="氧气瓶/便携氧气袋" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="保暖衣物" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
                     </ul>
+                    <button class="add-item-btn" aria-label="添加">+</button>
                 </div>
                 <div class="packing-card">
                     <h3><i class="fas fa-hiking"></i> 日常与户外</h3>
                     <ul class="checklist">
-                        <li><label><input type="checkbox"> 水壶/保温杯</label></li>
-                        <li><label><input type="checkbox"> 小背包/腰包</label></li>
-                        <li><label><input type="checkbox"> 相机/运动相机</label></li>
-                        <li><label><input type="checkbox"> 垃圾袋</label></li>
-                        <li><label><input type="checkbox"> 充气枕/眼罩/耳塞</label></li>
-                        <li><label><input type="checkbox"> 泳衣/拖鞋</label></li>
-                        <li><label><input type="checkbox"> 雨鞋/鞋套</label></li>
-                        <li><label><input type="checkbox"> 纸巾/湿巾</label></li>
-                        <li><label><input type="checkbox"> 小手电/头灯</label></li>
-                        <li><label><input type="checkbox"> 备用眼镜/隐形眼镜护理液</label></li>
+                        <li class="packing-item"><input type="text" value="水壶/保温杯" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="小背包/腰包" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="相机/运动相机" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="垃圾袋" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="充气枕/眼罩/耳塞" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="泳衣/拖鞋" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="雨鞋/鞋套" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="纸巾/湿巾" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="小手电/头灯" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="备用眼镜/隐形眼镜护理液" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
                     </ul>
+                    <button class="add-item-btn" aria-label="添加">+</button>
                 </div>
                 <div class="packing-card">
                     <h3><i class="fas fa-car"></i> 车辆与自驾</h3>
                     <ul class="checklist">
-                        <li><label><input type="checkbox"> 车载手机支架/导航支架</label></li>
-                        <li><label><input type="checkbox"> 车载充电器/点烟器转USB</label></li>
-                        <li><label><input type="checkbox"> 车载应急启动电源</label></li>
-                        <li><label><input type="checkbox"> 车用灭火器/安全锤/拖车绳</label></li>
-                        <li><label><input type="checkbox"> 车辆三角警示牌/备胎/补胎工具/千斤顶</label></li>
-                        <li><label><input type="checkbox"> 机油/冷却液/玻璃水</label></li>
-                        <li><label><input type="checkbox"> 车辆保险单复印件</label></li>
+                        <li class="packing-item"><input type="text" value="车载手机支架/导航支架" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="车载充电器/点烟器转USB" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="车载应急启动电源" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="车用灭火器/安全锤/拖车绳" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="车辆三角警示牌/备胎/补胎工具/千斤顶" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="机油/冷却液/玻璃水" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
+                        <li class="packing-item"><input type="text" value="车辆保险单复印件" readonly class="packing-input"><button class="delete-btn" aria-label="删除">×</button></li>
                     </ul>
+                    <button class="add-item-btn" aria-label="添加">+</button>
                 </div>
             </div>
         </div>

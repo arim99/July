@@ -652,3 +652,40 @@ function updateAllCityWeather() {
 // 页面加载和每10分钟刷新
 updateAllCityWeather();
 setInterval(updateAllCityWeather, 10 * 60 * 1000); 
+
+document.querySelectorAll('.packing-input').forEach(function(input) {
+  input.addEventListener('click', function() {
+    this.removeAttribute('readonly');
+    this.focus();
+  });
+  input.addEventListener('blur', function() {
+    this.setAttribute('readonly', true);
+  });
+});
+document.querySelectorAll('.delete-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    this.closest('li').remove();
+  });
+});
+document.querySelectorAll('.add-item-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var ul = this.previousElementSibling;
+    if (!ul || ul.tagName.toLowerCase() !== 'ul') return;
+    var li = document.createElement('li');
+    li.className = 'packing-item';
+    li.innerHTML = '<input type="text" class="packing-input" value="" readonly><button class="delete-btn" aria-label="删除">×</button>';
+    ul.appendChild(li);
+    // 绑定事件
+    var input = li.querySelector('.packing-input');
+    input.addEventListener('click', function() {
+      this.removeAttribute('readonly');
+      this.focus();
+    });
+    input.addEventListener('blur', function() {
+      this.setAttribute('readonly', true);
+    });
+    li.querySelector('.delete-btn').addEventListener('click', function() {
+      li.remove();
+    });
+  });
+}); 
