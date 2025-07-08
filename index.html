@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16天广西云南环线自驾游 - 完整行程指南</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-route"></i>
+                <span>广西云南环线</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#overview">行程概览</a></li>
+                <li><a href="#itinerary">详细行程</a></li>
+                <li><a href="#budget">费用计算</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页横幅 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>16天广西云南环线自驾游</h1>
+            <p class="hero-subtitle">穿越热带雨林，探秘高原雪山，环游最美海岸线</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>16天</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-road"></i>
+                    <span>4500km</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>12个城市</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-yen-sign"></i>
+                    <span>12000元</span>
+                </div>
+            </div>
+            <a href="#itinerary" class="cta-button">查看详细行程</a>
+        </div>
+        <div class="hero-image">
+            <div class="image-slider">
+                <div class="slide active" style="background-image: url('素材/detianpubu.jpeg')">
+                    <img src="素材/detianpubu.jpeg" alt="德天瀑布" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:0;" />
+                    <div class="slide-info">
+                        <h4>德天瀑布</h4>
+                        <p>海拔：500米<br>经纬度：22.8531°N, 106.7222°E</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('素材/puzhehei.jpeg')">
+                    <img src="素材/puzhehei.jpeg" alt="普者黑" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:0;" />
+                    <div class="slide-info">
+                        <h4>普者黑</h4>
+                        <p>海拔：1450米<br>经纬度：24.1167°N, 104.1167°E</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('素材/fuxianhu.png')">
+                    <img src="素材/fuxianhu.png" alt="抚仙湖" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:0;" />
+                    <div class="slide-info">
+                        <h4>抚仙湖</h4>
+                        <p>海拔：1720米<br>经纬度：24.5833°N, 102.8333°E</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('素材/xishuangbannaredaizhiwuyuan.jpg')">
+                    <img src="素材/xishuangbannaredaizhiwuyuan.jpg" alt="西双版纳热带植物园" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:0;" />
+                    <div class="slide-info">
+                        <h4>西双版纳热带植物园</h4>
+                        <p>海拔：600米<br>经纬度：21.9167°N, 101.2667°E</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('素材/dalierhai.jpg')">
+                    <img src="素材/dalierhai.jpg" alt="大理洱海" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:0;" />
+                    <div class="slide-info">
+                        <h4>大理洱海</h4>
+                        <p>海拔：1970米<br>经纬度：25.7000°N, 100.1667°E</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('素材/lijianggucheng.jpg')">
+                    <img src="素材/lijianggucheng.jpg" alt="丽江古城" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:0;" />
+                    <div class="slide-info">
+                        <h4>丽江古城</h4>
+                        <p>海拔：2400米<br>经纬度：26.8704°N, 100.2385°E</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('素材/yulongxueshan.jpeg')">
+                    <img src="素材/yulongxueshan.jpeg" alt="玉龙雪山" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:0;" />
+                    <div class="slide-info">
+                        <h4>玉龙雪山</h4>
+                        <p>海拔：4680米<br>经纬度：27.0986°N, 100.2420°E</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('素材/songzanlinshi.jpg')">
+                    <img src="素材/songzanlinshi.jpg" alt="香格里拉松赞林寺" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:0;" />
+                    <div class="slide-info">
+                        <h4>香格里拉松赞林寺</h4>
+                        <p>海拔：3300米<br>经纬度：27.8667°N, 99.7000°E</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('素材/luguhu.jpeg')">
+                    <img src="素材/luguhu.jpeg" alt="泸沽湖" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:0;" />
+                    <div class="slide-info">
+                        <h4>泸沽湖</h4>
+                        <p>海拔：2690米<br>经纬度：27.7000°N, 100.7833°E</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('素材/beihaiyintan.jpg')">
+                    <img src="素材/beihaiyintan.jpg" alt="北海银滩" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:0;" />
+                    <div class="slide-info">
+                        <h4>北海银滩</h4>
+                        <p>海拔：10米<br>经纬度：21.4833°N, 109.1167°E</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行程概览 -->
+    <section id="overview" class="overview">
+        <div class="container">
+            <h2>行程概览</h2>
+            <div class="route-map">
+                <div class="route-line">
+                    <div class="route-point" data-city="广州番禺">
+                        <i class="fas fa-map-pin"></i>
+                        <span>广州番禺</span>
+                        <div class="route-date">7.19</div>
+                    </div>
+                    <div class="route-point" data-city="崇左">
+                        <i class="fas fa-map-pin"></i>
+                        <span>崇左</span>
+                        <div class="route-date">7.19</div>
+                    </div>
+                    <div class="route-point" data-city="普者黑">
+                        <i class="fas fa-map-pin"></i>
+                        <span>普者黑</span>
+                        <div class="route-date">7.20</div>
+                    </div>
+                    <div class="route-point" data-city="玉溪">
+                        <i class="fas fa-map-pin"></i>
+                        <span>玉溪</span>
+                        <div class="route-date">7.22</div>
+                    </div>
+                    <div class="route-point" data-city="西双版纳">
+                        <i class="fas fa-map-pin"></i>
+                        <span>西双版纳</span>
+                        <div class="route-date">7.23</div>
+                    </div>
+                    <div class="route-point" data-city="大理">
+                        <i class="fas fa-map-pin"></i>
+                        <span>大理</span>
+                        <div class="route-date">7.25</div>
+                    </div>
+                    <div class="route-point" data-city="丽江">
+                        <i class="fas fa-map-pin"></i>
+                        <span>丽江</span>
+                        <div class="route-date">7.27</div>
+                    </div>
+                    <div class="route-point" data-city="香格里拉">
+                        <i class="fas fa-map-pin"></i>
+                        <span>香格里拉</span>
+                        <div class="route-date">7.29</div>
+                    </div>
+                    <div class="route-point" data-city="泸沽湖">
+                        <i class="fas fa-map-pin"></i>
+                        <span>泸沽湖</span>
+                        <div class="route-date">7.31</div>
+                    </div>
+                    <div class="route-point" data-city="昆明">
+                        <i class="fas fa-map-pin"></i>
+                        <span>昆明</span>
+                        <div class="route-date">8.1</div>
+                    </div>
+                    <div class="route-point" data-city="北海">
+                        <i class="fas fa-map-pin"></i>
+                        <span>北海</span>
+                        <div class="route-date">8.2</div>
+                    </div>
+                    <div class="route-point" data-city="湛江">
+                        <i class="fas fa-map-pin"></i>
+                        <span>湛江</span>
+                        <div class="route-date">8.3</div>
+                    </div>
+                </div>
+                <div class="route-timeline"></div>
+            </div>
+            <div class="overview-cards">
+                <div class="card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>时间安排</h3>
+                    <p>2024年7月19日 - 8月3日</p>
+                    <p>共16天精彩旅程</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-road"></i>
+                    <h3>总里程</h3>
+                    <p>约4500公里</p>
+                    <p>穿越多个气候带</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-mountain"></i>
+                    <h3>海拔变化</h3>
+                    <p>10米 - 4680米</p>
+                    <p>从沿海到高原</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-yen-sign"></i>
+                    <h3>预算费用</h3>
+                    <p>约12000元</p>
+                    <p>2人费用（不含油费）</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行程特色亮点 -->
+    <section id="highlights" class="highlights-section">
+        <div class="container">
+            <h2 class="highlights-title">行程特色亮点</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card nature">
+                    <div class="highlight-icon"><i class="fas fa-mountain"></i></div>
+                    <h3>自然风光</h3>
+                    <ul>
+                        <li><strong>德天瀑布</strong>：亚洲第一大跨国瀑布</li>
+                        <li><strong>普者黑</strong>：喀斯特地貌，山水田园</li>
+                        <li><strong>抚仙湖</strong>：高原明珠，清澈见底</li>
+                        <li><strong>玉龙雪山</strong>：纳西族神山，冰川奇观</li>
+                        <li><strong>泸沽湖</strong>：摩梭族母系社会，女儿国</li>
+                    </ul>
+                </div>
+                <div class="highlight-card culture">
+                    <div class="highlight-icon"><i class="fas fa-landmark"></i></div>
+                    <h3>人文景观</h3>
+                    <ul>
+                        <li><strong>西双版纳</strong>：傣族文化，热带雨林</li>
+                        <li><strong>大理古城</strong>：白族文化，风花雪月</li>
+                        <li><strong>丽江古城</strong>：纳西族文化，世界遗产</li>
+                        <li><strong>香格里拉</strong>：藏族文化，藏传佛教</li>
+                        <li><strong>北海银滩</strong>：海滨风光，海鲜美食</li>
+                    </ul>
+                </div>
+                <div class="highlight-card road">
+                    <div class="highlight-icon"><i class="fas fa-road"></i></div>
+                    <h3>特色路段</h3>
+                    <ul>
+                        <li><strong>合那高速</strong>：中国最美高速，穿洞过桥</li>
+                        <li><strong>环洱海西路</strong>：网红公路，洱海风光</li>
+                        <li><strong>丽宁公路</strong>：盘山公路，峡谷风光</li>
+                        <li><strong>G214滇藏线</strong>：高原公路，雪山草原</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 详细行程 -->
+    <section id="itinerary" class="itinerary">
+        <div class="container">
+            <h2>详细行程安排</h2>
+            <div class="timeline">
+                <!-- 第1天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第1天</span>
+                        <span class="date">7.19</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>广州番禺 → 崇左</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 500km / 5.5h</span>
+                            <span><i class="fas fa-clock"></i> 10:00出发 → 15:30到达</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>德天瀑布（16:00-17:30）</li>
+                                <li>明仕田园（17:40-19:00）</li>
+                            </ul>
+                            <div class="ticket-info">门票：德天瀑布80元/人，明仕田园竹筏100元/人</div>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>高温湿热（30-35℃），午后多短时暴雨</p>
+                            <p><strong>路况：</strong>广昆高速广东段偶有拥堵，崇左至德天瀑布为二级公路，雨天减速慢行</p>
+                        </div>
+                        <div class="expenses-editor" data-day="1"></div>
+                    </div>
+                </div>
+
+                <!-- 第2天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第2天</span>
+                        <span class="date">7.20</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>崇左 → 普者黑</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 500km / 6h</span>
+                            <span><i class="fas fa-clock"></i> 8:00出发 → 14:00到达</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>青龙山日落（17:00-18:00）</li>
+                                <li>仙人洞村（19:00-20:00）</li>
+                            </ul>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>多雨（25-30℃），山区易起雾，能见度低</p>
+                            <p><strong>路况：</strong>合那高速多穿洞和桥梁，雨天需开启雾灯</p>
+                        </div>
+                        <div class="expenses-editor" data-day="2"></div>
+                    </div>
+                </div>
+
+                <!-- 第3天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第3天</span>
+                        <span class="date">7.21</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>普者黑全天</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> - </span>
+                            <span><i class="fas fa-clock"></i> 全天</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>柳叶舟（9:00-10:30）</li>
+                                <li>溶洞（11:00-12:00）</li>
+                                <li>菜花箐村（14:30-16:00）</li>
+                            </ul>
+                            <div class="ticket-info">门票：柳叶舟200元/人</div>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>多云转阵雨（24-29℃），雨后山路湿滑</p>
+                            <p><strong>路况：</strong>村内道路多为水泥路，宽度仅容两车交汇，建议将车停民宿后步行；青龙山登山步道雨后泥泞，穿防滑鞋</p>
+                        </div>
+                        <div class="expenses-editor" data-day="3"></div>
+                    </div>
+                </div>
+
+                <!-- 第4天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第4天</span>
+                        <span class="date">7.22</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>普者黑 → 玉溪</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 450km / 5.5h</span>
+                            <span><i class="fas fa-clock"></i> 8:00出发 → 13:30到达</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>禄充风景区（14:00-15:30）</li>
+                                <li>明星鱼洞（16:00-17:00）</li>
+                            </ul>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>晴热（26-32℃），午后紫外线强</p>
+                            <p><strong>路况：</strong>广昆高速云南段路面平整，服务区完善；抚仙湖环湖路为柏油路，部分路段沿湖无护栏，减速慢行</p>
+                        </div>
+                        <div class="expenses-editor" data-day="4"></div>
+                    </div>
+                </div>
+
+                <!-- 第5天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第5天</span>
+                        <span class="date">7.23</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>玉溪 → 西双版纳</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 450km / 5.5h</span>
+                            <span><i class="fas fa-clock"></i> 8:00出发 → 13:30到达</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>曼听公园（14:30-16:00）</li>
+                                <li>星光夜市（19:00-21:00）</li>
+                            </ul>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>高温高湿（28-35℃），多雷阵雨，傍晚转晴</p>
+                            <p><strong>路况：</strong>昆磨高速（思小高速段）穿热带雨林，多弯道和长下坡，需检查刹车；景洪市区交通拥堵，告庄附近停车位紧张</p>
+                        </div>
+                        <div class="expenses-editor" data-day="5"></div>
+                    </div>
+                </div>
+
+                <!-- 第6天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第6天</span>
+                        <span class="date">7.24</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>西双版纳全天</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> - </span>
+                            <span><i class="fas fa-clock"></i> 全天</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>中科院植物园（8:30-11:30）</li>
+                                <li>野象谷（15:30-17:30）</li>
+                            </ul>
+                            <div class="ticket-info">门票：中科院植物园80元/人，野象谷60元/人，牧象198元/人 <span style="color:red;font-weight:bold">（中科院植物园、野象谷牧象需提前1天预约）</span></div>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>暴雨转多云（27-34℃），午后可能有雷暴</p>
+                            <p><strong>路况：</strong>植物园至野象谷为柏油路，雨天路滑；野象谷景区内道路多土路，雨后泥泞，穿防滑鞋</p>
+                        </div>
+                        <div class="expenses-editor" data-day="6"></div>
+                    </div>
+                </div>
+
+                <!-- 第7天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第7天</span>
+                        <span class="date">7.25</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>西双版纳 → 大理</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 600km / 8h</span>
+                            <span><i class="fas fa-clock"></i> 6:00出发 → 14:00到达</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>大理古城（16:00-18:00）</li>
+                                <li>五华楼夜景（19:00-19:30）</li>
+                            </ul>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>多云（20-28℃），高原紫外线强，傍晚转凉</p>
+                            <p><strong>路况：</strong>昆磨高速转大丽高速，楚雄至祥云段多桥梁，雨天无明显积水；大理古城周边道路平整，停车方便</p>
+                        </div>
+                        <div class="expenses-editor" data-day="7"></div>
+                    </div>
+                </div>
+
+                <!-- 第8天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第8天</span>
+                        <span class="date">7.26</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>大理环洱海全天</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 130km / 轻松驾驶</span>
+                            <span><i class="fas fa-clock"></i> 全天</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>崇圣寺三塔（9:00-10:30）</li>
+                                <li>喜洲古镇（11:30-13:00）</li>
+                                <li>磻溪S弯（14:30-16:30）</li>
+                                <li>双廊（17:30-18:30）</li>
+                            </ul>
+                            <div class="ticket-info">门票：崇圣寺三塔75元/人，景区电瓶车25元/人，磻溪S弯电动车30元/天</div>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>晴间多云（19-27℃），洱海风大</p>
+                            <p><strong>路况：</strong>环洱海西路（磻溪至喜洲）为网红公路，游客多，需注意避让行人；双廊古镇内道路狭窄，建议将车停古镇外停车场</p>
+                        </div>
+                        <div class="expenses-editor" data-day="8"></div>
+                    </div>
+                </div>
+
+                <!-- 第9天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第9天</span>
+                        <span class="date">7.27</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>大理 → 丽江</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 180km / 2.5h</span>
+                            <span><i class="fas fa-clock"></i> 10:00出发 → 12:30到达</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>束河古镇（13:00-14:30）</li>
+                                <li>丽江古城（15:30-18:00）</li>
+                            </ul>
+                            <div class="ticket-info">古城维护费50元/人</div>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>多云转阴（18-25℃），傍晚可能有小雨</p>
+                            <p><strong>路况：</strong>大丽高速为双向四车道，路面平整；丽江古城周边多盘山路，雨天无积水，束河古镇内禁止机动车通行</p>
+                        </div>
+                        <div class="expenses-editor" data-day="9"></div>
+                    </div>
+                </div>
+
+                <!-- 第10天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第10天</span>
+                        <span class="date">7.28</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>丽江 → 玉龙雪山</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 40km / 40分钟</span>
+                            <span><i class="fas fa-clock"></i> 8:00出发 → 8:40到达</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>冰川公园（8:00-11:00）</li>
+                                <li>蓝月谷（13:30-15:30）</li>
+                            </ul>
+                            <div class="ticket-info">门票：玉龙雪山索道140元/人，蓝月谷电瓶车60元/人，氧气瓶30元/罐 <span style="color:red;font-weight:bold">（玉龙雪山索道票需提前1天20:00预约抢票）</span></div>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>晴（10-20℃），山顶可能有积雪，风大寒冷</p>
+                            <p><strong>路况：</strong>丽江至玉龙雪山为柏油路，弯道多，部分路段海拔上升快，需缓慢驾驶；景区内道路为水泥路，停车场充足</p>
+                        </div>
+                        <div class="expenses-editor" data-day="10"></div>
+                    </div>
+                </div>
+
+                <!-- 第11天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第11天</span>
+                        <span class="date">7.29</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>丽江 → 虎跳峡 → 香格里拉</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 180km / 6.5h</span>
+                            <span><i class="fas fa-clock"></i> 7:00出发 → 17:00到达</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>虎跳峡徒步（9:00-12:30）</li>
+                                <li>松赞林寺（17:30-19:00）</li>
+                                <li>独克宗古城（19:30-20:30）</li>
+                            </ul>
+                            <div class="ticket-info">门票：松赞林寺90元/人，登山杖20元/根 <span style="color:red;font-weight:bold">（松赞林寺需提前1天预约）</span></div>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>小雨转多云（15-22℃），虎跳峡多雾，香格里拉傍晚转晴</p>
+                            <p><strong>路况：</strong>丽宁公路（丽江至虎跳峡）多盘山路，雨天易有落石，需观察路况；虎跳峡至香格里拉为G214滇藏线，部分路段施工，减速慢行</p>
+                        </div>
+                        <div class="expenses-editor" data-day="11"></div>
+                    </div>
+                </div>
+
+                <!-- 第12天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第12天</span>
+                        <span class="date">7.30</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>香格里拉全天</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 30km / 轻松驾驶</span>
+                            <span><i class="fas fa-clock"></i> 全天</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>普达措（9:00-12:00）</li>
+                                <li>纳帕海（15:00-17:00）</li>
+                            </ul>
+                            <div class="ticket-info">门票：普达措60元/人，纳帕海马车50元/人 <span style="color:red;font-weight:bold">（普达措国家公园需提前1天预约）</span></div>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>中雨转小雨（12-18℃），高原温差大，需穿外套</p>
+                            <p><strong>路况：</strong>香格里拉至普达措为柏油路，部分路段泥泞；纳帕海环湖路为土路，雨天积水，建议乘马车而非自驾</p>
+                        </div>
+                        <div class="expenses-editor" data-day="12"></div>
+                    </div>
+                </div>
+
+                <!-- 第13天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第13天</span>
+                        <span class="date">7.31</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>香格里拉 → 泸沽湖</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 280km / 5.5h</span>
+                            <span><i class="fas fa-clock"></i> 8:00出发 → 13:30到达</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>里格半岛+猪槽船（15:00-17:00）</li>
+                                <li>里格观景台日落（18:00-18:30）</li>
+                            </ul>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>多云（18-25℃），午后有阵雨，湖面多雾</p>
+                            <p><strong>路况：</strong>香格里拉至泸沽湖为G214转丽宁公路，多盘山路和长下坡，雨天刹车易过热，建议定时休息；泸沽湖环湖路为柏油路，部分路段沿湖无护栏，减速慢行</p>
+                        </div>
+                        <div class="expenses-editor" data-day="13"></div>
+                    </div>
+                </div>
+
+                <!-- 第14天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第14天</span>
+                        <span class="date">8.1</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>泸沽湖 → 昆明</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 500km / 6h</span>
+                            <span><i class="fas fa-clock"></i> 10:00出发 → 16:00到达</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>五彩滩日出（7:00-7:30）</li>
+                                <li>王妃岛（8:00-9:30）</li>
+                                <li>斗南花市（16:30-18:30）</li>
+                            </ul>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>晴热（25-32℃），中途可能有雷阵雨</p>
+                            <p><strong>路况：</strong>泸沽湖至昆明为宁泸高速转杭瑞高速，永胜段多隧道，雨天需开启车灯；楚雄至昆明段为双向六车道，路况佳</p>
+                        </div>
+                        <div class="expenses-editor" data-day="14"></div>
+                    </div>
+                </div>
+
+                <!-- 第15天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第15天</span>
+                        <span class="date">8.2</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>昆明 → 北海</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 600km / 6.5h</span>
+                            <span><i class="fas fa-clock"></i> 8:00出发 → 14:30到达</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>银滩（16:00-18:00）</li>
+                                <li>侨港风情街（19:00-20:30）</li>
+                            </ul>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>多云转晴（28-33℃），风力3-4级，可能受台风外围影响</p>
+                            <p><strong>路况：</strong>广昆高速转玉铁高速，路面平整，服务区完善；北海银滩周边道路为柏油路，沿海风力大，注意防风</p>
+                        </div>
+                        <div class="expenses-editor" data-day="15"></div>
+                    </div>
+                </div>
+
+                <!-- 第16天 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="day">第16天</span>
+                        <span class="date">8.3</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>北海 → 湛江</h3>
+                        <div class="route-info">
+                            <span><i class="fas fa-road"></i> 200km / 2.5h</span>
+                            <span><i class="fas fa-clock"></i> 10:00出发 → 12:30到达</span>
+                        </div>
+                        <div class="attractions">
+                            <h4>景点安排</h4>
+                            <ul>
+                                <li>金沙湾（14:00-16:00）</li>
+                                <li>赤坎老街（17:00-18:30）</li>
+                            </ul>
+                        </div>
+                        <div class="weather-info">
+                            <h4>天气路况</h4>
+                            <p><strong>天气：</strong>晴（27-32℃），沿海湿度大，午后有海风</p>
+                            <p><strong>路况：</strong>兰海高速北海至湛江段为双向四车道，路面平整；湛江市区金沙湾周边道路宽敞，赤坎老街为骑楼步行街，禁止机动车进入</p>
+                        </div>
+                        <div class="expenses-editor" data-day="16"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 费用预算 -->
+    <section id="budget" class="budget">
+        <div class="container">
+            <h2>费用计算</h2>
+            <div class="budget-overview">
+                <div class="budget-chart">
+                    <div class="chart-item">
+                        <div class="chart-bar" style="width: 47%; background: #4CAF50;">
+                            <span>住宿费</span>
+                        </div>
+                        <span class="amount">5600元</span>
+                    </div>
+                    <div class="chart-item">
+                        <div class="chart-bar" style="width: 27%; background: #2196F3;">
+                            <span>餐饮费</span>
+                        </div>
+                        <span class="amount">3200元</span>
+                    </div>
+                    <div class="chart-item">
+                        <div class="chart-bar" style="width: 17%; background: #FF9800;">
+                            <span>门票费</span>
+                        </div>
+                        <span class="amount">2000元</span>
+                    </div>
+                    <div class="chart-item">
+                        <div class="chart-bar" style="width: 9%; background: #9C27B0;">
+                            <span>其他费用</span>
+                        </div>
+                        <span class="amount">1200元</span>
+                    </div>
+                </div>
+                <div class="budget-summary">
+                    <h3>总计算：12000元（2人，不含油费）</h3>
+                    <div class="budget-details">
+                        <div class="detail-item">
+                            <span class="label">住宿费：</span>
+                            <span class="value">5600元（350元/晚 × 16晚）</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">餐饮费：</span>
+                            <span class="value">3200元（200元/天 × 16天）</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">门票费：</span>
+                            <span class="value">约2000元</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">其他费用：</span>
+                            <span class="value">约1200元</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 必备装备清单 -->
+    <section id="packing-list" class="packing-list">
+        <div class="container">
+            <h2>必备装备清单</h2>
+            <div class="packing-grid">
+                <div class="packing-card">
+                    <h3><i class="fas fa-id-card"></i> 证件与通讯</h3>
+                    <ul class="checklist">
+                        <li><label><input type="checkbox"> 身份证/驾驶证</label></li>
+                        <li><label><input type="checkbox"> 手机及充电器/充电宝</label></li>
+                        <li><label><input type="checkbox"> 现金</label></li>
+                        <li><label><input type="checkbox"> 地图/离线导航APP</label></li>
+                        <li><label><input type="checkbox"> 备用钥匙</label></li>
+                    </ul>
+                </div>
+                <div class="packing-card">
+                    <h3><i class="fas fa-shield-alt"></i> 防护与健康</h3>
+                    <ul class="checklist">
+                        <li><label><input type="checkbox"> 防晒用品（防晒霜/墨镜/遮阳帽）</label></li>
+                        <li><label><input type="checkbox"> 雨衣/雨伞</label></li>
+                        <li><label><input type="checkbox"> 防滑登山鞋</label></li>
+                        <li><label><input type="checkbox"> 驱蚊液/花露水</label></li>
+                        <li><label><input type="checkbox"> 一次性口罩/湿巾/消毒液</label></li>
+                        <li><label><input type="checkbox"> 常用药品（感冒药、肠胃药、晕车药、创可贴、布洛芬、藿香正气水、抗高反药物、止泻药、外用消毒药水、过敏药）</label></li>
+                        <li><label><input type="checkbox"> 体温计</label></li>
+                        <li><label><input type="checkbox"> 个人急救包</label></li>
+                        <li><label><input type="checkbox"> 氧气瓶/便携氧气袋</label></li>
+                        <li><label><input type="checkbox"> 保暖衣物</label></li>
+                    </ul>
+                </div>
+                <div class="packing-card">
+                    <h3><i class="fas fa-hiking"></i> 日常与户外</h3>
+                    <ul class="checklist">
+                        <li><label><input type="checkbox"> 水壶/保温杯</label></li>
+                        <li><label><input type="checkbox"> 小背包/腰包</label></li>
+                        <li><label><input type="checkbox"> 相机/运动相机</label></li>
+                        <li><label><input type="checkbox"> 垃圾袋</label></li>
+                        <li><label><input type="checkbox"> 充气枕/眼罩/耳塞</label></li>
+                        <li><label><input type="checkbox"> 泳衣/拖鞋</label></li>
+                        <li><label><input type="checkbox"> 雨鞋/鞋套</label></li>
+                        <li><label><input type="checkbox"> 纸巾/湿巾</label></li>
+                        <li><label><input type="checkbox"> 小手电/头灯</label></li>
+                        <li><label><input type="checkbox"> 备用眼镜/隐形眼镜护理液</label></li>
+                    </ul>
+                </div>
+                <div class="packing-card">
+                    <h3><i class="fas fa-car"></i> 车辆与自驾</h3>
+                    <ul class="checklist">
+                        <li><label><input type="checkbox"> 车载手机支架/导航支架</label></li>
+                        <li><label><input type="checkbox"> 车载充电器/点烟器转USB</label></li>
+                        <li><label><input type="checkbox"> 车载应急启动电源</label></li>
+                        <li><label><input type="checkbox"> 车用灭火器/安全锤/拖车绳</label></li>
+                        <li><label><input type="checkbox"> 车辆三角警示牌/备胎/补胎工具/千斤顶</label></li>
+                        <li><label><input type="checkbox"> 机油/冷却液/玻璃水</label></li>
+                        <li><label><input type="checkbox"> 车辆保险单复印件</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>重要电话</h3>
+                    <p>云南交警：0871-96122</p>
+                    <p>广西交警：0771-96122</p>
+                    <p>广东交警：020-83111555</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 广西云南环线自驾游. 安全第一，旅途愉快！</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

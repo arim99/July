@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        .api-test {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+        .api-test h3 {
+            margin-bottom: 10px;
+            color: #f39c12;
+        }
+        .api-test button {
+            background: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .api-test button:hover {
+            background: #357abd;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .status.success {
+            background: #27ae60;
+        }
+        .status.error {
+            background: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 广西云南环线自驾游智能旅游助手 - API测试</h1>
+        <p>这个页面用于测试后端API功能是否正常工作。</p>
+        
+        <div class="api-test">
+            <h3>📡 后端连接测试</h3>
+            <button onclick="testBackendConnection()">测试后端连接</button>
+            <div id="backendResult" class="result"></div>
+        </div>
+        
+        <div class="api-test">
+            <h3>🗺️ 行程数据测试</h3>
+            <button onclick="testTripData()">获取行程数据</button>
+            <button onclick="testTripCountdown()">获取倒计时</button>
+            <button onclick="testTripBudget()">获取费用预算</button>
+            <div id="tripResult" class="result"></div>
+        </div>
+        
+        <div class="api-test">
+            <h3>🌤️ 天气数据测试</h3>
+            <button onclick="testWeatherData()">获取天气数据</button>
+            <div id="weatherResult" class="result"></div>
+        </div>
+        
+        <div class="api-test">
+            <h3>🏞️ 景点数据测试</h3>
+            <button onclick="testAttractionsData()">获取景点数据</button>
+            <div id="attractionsResult" class="result"></div>
+        </div>
+        
+        <div class="api-test">
+            <h3>🏨 酒店数据测试</h3>
+            <button onclick="testHotelsData()">获取酒店数据</button>
+            <div id="hotelsResult" class="result"></div>
+        </div>
+        
+        <div class="api-test">
+            <h3>🚨 应急数据测试</h3>
+            <button onclick="testEmergencyData()">获取应急数据</button>
+            <div id="emergencyResult" class="result"></div>
+        </div>
+        
+        <div class="api-test">
+            <h3>💬 论坛数据测试</h3>
+            <button onclick="testForumData()">获取论坛数据</button>
+            <div id="forumResult" class="result"></div>
+        </div>
+        
+        <div class="api-test">
+            <h3>🔔 通知数据测试</h3>
+            <button onclick="testNotificationsData()">获取通知数据</button>
+            <div id="notificationsResult" class="result"></div>
+        </div>
+        
+        <div class="api-test">
+            <h3>🧪 完整功能测试</h3>
+            <button onclick="runAllTests()">运行所有测试</button>
+            <div id="allTestsResult" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:3001/api';
+        
+        async function testBackendConnection() {
+            const resultDiv = document.getElementById('backendResult');
+            resultDiv.innerHTML = '测试中...';
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/trip/guangxi-yunnan-16days`);
+                if (response.ok) {
+                    const data = await response.json();
+                    resultDiv.innerHTML = `✅ 后端连接成功\n\n返回数据:\n${JSON.stringify(data, null, 2)}`;
+                } else {
+                    resultDiv.innerHTML = `❌ 后端连接失败\n状态码: ${response.status}`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `❌ 连接错误\n${error.message}`;
+            }
+        }
+        
+        async function testTripData() {
+            const resultDiv = document.getElementById('tripResult');
+            resultDiv.innerHTML = '获取中...';
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/trip/guangxi-yunnan-16days`);
+                const data = await response.json();
+                resultDiv.innerHTML = `✅ 行程数据获取成功\n\n总天数: ${data.totalDays}\n总距离: ${data.totalDistance}km\n总预算: ¥${data.totalBudget}`;
+            } catch (error) {
+                resultDiv.innerHTML = `❌ 获取失败\n${error.message}`;
+            }
+        }
+        
+        async function testTripCountdown() {
+            const resultDiv = document.getElementById('tripResult');
+            resultDiv.innerHTML = '获取倒计时...';
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/trip/countdown/guangxi-yunnan-16days`);
+                const data = await response.json();
+                resultDiv.innerHTML = `✅ 倒计时数据获取成功\n\n距离出发: ${data.daysUntilTrip}天 ${data.hoursUntilTrip}小时 ${data.minutesUntilTrip}分钟`;
+            } catch (error) {
+                resultDiv.innerHTML = `❌ 获取失败\n${error.message}`;
+            }
+        }
+        
+        async function testTripBudget() {
+            const resultDiv = document.getElementById('tripResult');
+            resultDiv.innerHTML = '获取预算...';
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/trip/guangxi-yunnan-16days/budget`);
+                const data = await response.json();
+                resultDiv.innerHTML = `✅ 预算数据获取成功\n\n住宿: ¥${data.accommodation}\n餐饮: ¥${data.food}\n交通: ¥${data.transportation}\n景点: ¥${data.attractions}\n总计: ¥${data.total}`;
+            } catch (error) {
+                resultDiv.innerHTML = `❌ 获取失败\n${error.message}`;
+            }
+        }
+        
+        async function testWeatherData() {
+            const resultDiv = document.getElementById('weatherResult');
+            resultDiv.innerHTML = '获取天气数据...';
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/weather/current/南宁`);
+                const data = await response.json();
+                resultDiv.innerHTML = `✅ 天气数据获取成功\n\n城市: ${data.location.name}\n温度: ${data.current.temp_c}°C\n湿度: ${data.current.humidity}%\n风速: ${data.current.wind_kph} km/h`;
+            } catch (error) {
+                resultDiv.innerHTML = `❌ 获取失败\n${error.message}`;
+            }
+        }
+        
+        async function testAttractionsData() {
+            const resultDiv = document.getElementById('attractionsResult');
+            resultDiv.innerHTML = '获取景点数据...';
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/attractions/city/南宁`);
+                const data = await response.json();
+                resultDiv.innerHTML = `✅ 景点数据获取成功\n\n城市: ${data.city}\n景点数量: ${data.count}\n景点列表: ${data.attractions.map(a => a.name).join(', ')}`;
+            } catch (error) {
+                resultDiv.innerHTML = `❌ 获取失败\n${error.message}`;
+            }
+        }
+        
+        async function testHotelsData() {
+            const resultDiv = document.getElementById('hotelsResult');
+            resultDiv.innerHTML = '获取酒店数据...';
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/hotels/city/南宁`);
+                const data = await response.json();
+                resultDiv.innerHTML = `✅ 酒店数据获取成功\n\n城市: ${data.city}\n酒店数量: ${data.count}\n酒店列表: ${data.hotels.map(h => h.name).join(', ')}`;
+            } catch (error) {
+                resultDiv.innerHTML = `❌ 获取失败\n${error.message}`;
+            }
+        }
+        
+        async function testEmergencyData() {
+            const resultDiv = document.getElementById('emergencyResult');
+            resultDiv.innerHTML = '获取应急数据...';
+            
+            try {
+                const [contactsResponse, tipsResponse] = await Promise.all([
+                    fetch(`${API_BASE_URL}/emergency/contacts`),
+                    fetch(`${API_BASE_URL}/emergency/vehicle-tips`)
+                ]);
+                
+                const contacts = await contactsResponse.json();
+                const tips = await tipsResponse.json();
+                
+                resultDiv.innerHTML = `✅ 应急数据获取成功\n\n应急联系城市数量: ${Object.keys(contacts.emergencyContacts).length}\n车辆注意事项分类: ${Object.keys(tips.allTips).length}`;
+            } catch (error) {
+                resultDiv.innerHTML = `❌ 获取失败\n${error.message}`;
+            }
+        }
+        
+        async function testForumData() {
+            const resultDiv = document.getElementById('forumResult');
+            resultDiv.innerHTML = '获取论坛数据...';
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/forum/posts`);
+                const data = await response.json();
+                resultDiv.innerHTML = `✅ 论坛数据获取成功\n\n帖子总数: ${data.total}\n当前页: ${data.page}\n帖子列表: ${data.posts.map(p => p.title).join(', ')}`;
+            } catch (error) {
+                resultDiv.innerHTML = `❌ 获取失败\n${error.message}`;
+            }
+        }
+        
+        async function testNotificationsData() {
+            const resultDiv = document.getElementById('notificationsResult');
+            resultDiv.innerHTML = '获取通知数据...';
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/notifications/user/user001`);
+                const data = await response.json();
+                resultDiv.innerHTML = `✅ 通知数据获取成功\n\n用户ID: ${data.userId}\n通知数量: ${data.count}\n未读数量: ${data.unreadCount}`;
+            } catch (error) {
+                resultDiv.innerHTML = `❌ 获取失败\n${error.message}`;
+            }
+        }
+        
+        async function runAllTests() {
+            const resultDiv = document.getElementById('allTestsResult');
+            resultDiv.innerHTML = '运行所有测试...\n';
+            
+            const tests = [
+                { name: '后端连接', func: testBackendConnection },
+                { name: '行程数据', func: testTripData },
+                { name: '天气数据', func: testWeatherData },
+                { name: '景点数据', func: testAttractionsData },
+                { name: '酒店数据', func: testHotelsData },
+                { name: '应急数据', func: testEmergencyData },
+                { name: '论坛数据', func: testForumData },
+                { name: '通知数据', func: testNotificationsData }
+            ];
+            
+            let results = '';
+            let successCount = 0;
+            
+            for (const test of tests) {
+                try {
+                    await test.func();
+                    results += `✅ ${test.name}: 成功\n`;
+                    successCount++;
+                } catch (error) {
+                    results += `❌ ${test.name}: 失败 - ${error.message}\n`;
+                }
+            }
+            
+            results += `\n📊 测试结果: ${successCount}/${tests.length} 个测试通过`;
+            resultDiv.innerHTML = results;
+        }
+        
+        // 页面加载时自动测试后端连接
+        window.addEventListener('load', () => {
+            setTimeout(testBackendConnection, 1000);
+        });
+    </script>
+</body>
+</html> 
