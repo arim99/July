@@ -1626,14 +1626,14 @@ section h3 {
 /* 移动端一列排布 */
 @media (max-width: 600px) {
     html, body {
-        font-size: 32px;
+        font-size: 20px;
         line-height: 1.1;
     }
-    h1 { font-size: 2.1rem; margin-bottom: 0.18em; }
-    h2 { font-size: 1.9rem; margin-bottom: 0.15em; }
-    h3 { font-size: 1.7rem; margin-bottom: 0.12em; }
+    h1 { font-size: 1.3rem; margin-bottom: 0.18em; }
+    h2 { font-size: 1.15rem; margin-bottom: 0.15em; }
+    h3 { font-size: 1.05rem; margin-bottom: 0.12em; }
     .card, .packing-card, .highlight-card, .packing-input {
-        font-size: 1.84em;
+        font-size: 1.15em;
     }
     .hero-content, .hero-stats, .overview-cards, .highlights-grid, .packing-grid {
         gap: 0.18em;
@@ -1655,7 +1655,7 @@ section h3 {
         padding: 0.04em 0.13em;
         min-width: 1.1em;
         min-height: 1.1em;
-        font-size: 2em;
+        font-size: 1.2em;
     }
     .packing-input {
         padding: 0.04em 0.08em;
